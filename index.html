@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Caucasia, Puerto del Cauca · Propuesta turística</title>
+<meta name="description" content="Propuesta ciudadana para convertir la orilla del río Cauca en Caucasia en un destino: malecón, paseos en barcaza, Laguna El Silencio y Ruta Campesina por las parcelas de Paraguay.">
+<meta name="theme-color" content="#0f4c5c">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta property="og:title" content="Caucasia, Puerto del Cauca">
+<meta property="og:description" content="Un río para vivirlo: malecón, barcazas, laguna y ruta campesina. ¿Usted lo apoya?">
+<meta property="og:image" content="icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f1e6; --card:#fffdf8; --ink:#16323a; --muted:#5d6b6e; --line:#e6dccb;
+  --river:#0f4c5c; --river2:#1b7a8c; --sun:#f28c28; --leaf:#3a7d44; --sand:#efe3cc;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0b1a1e; --card:#122429; --ink:#e7f0ef; --muted:#9db1b3; --line:#22393f; --sand:#1a2d32; --leaf:#6fbf73; }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;margin:0}
+a{color:var(--river2)}
+
+/* HERO */
+.hero{position:relative;color:#fff;background:linear-gradient(180deg,#f6a54b 0%,#e9783a 26%,#9c4a4a 46%,#0f4c5c 64%,#0b3743 100%);padding:30px 0 0;overflow:hidden}
+.hero .brand{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;opacity:.9}
+.hero h1{font-size:clamp(36px,9vw,60px);font-weight:800;margin:12px 0 6px;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+.hero .sub{font-family:Fraunces,serif;font-size:clamp(19px,4.5vw,24px);font-style:italic;margin:0 0 12px}
+.hero p{max-width:560px;margin:0;opacity:.95}
+.sunwrap{position:relative;height:150px;margin-top:10px}
+.sunwrap svg{position:absolute;inset:0;width:100%;height:100%}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{appearance:none;border:0;border-radius:12px;padding:12px 16px;font:600 15px Inter,sans-serif;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn.sun{background:var(--sun);color:#2b1300}
+.btn.ghost{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.35)}
+.btn.wa{background:#25d366;color:#06301a}
+.btn.sec{background:var(--card);color:var(--ink);border:1px solid var(--line)}
+
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-top:8px;padding-bottom:8px}
+nav a{flex:none;text-decoration:none;color:var(--muted);font-weight:600;font-size:14px;padding:7px 12px;border-radius:999px}
+nav a.on{background:var(--river);color:#fff}
+
+section{padding:36px 0 6px;scroll-margin-top:56px}
+.kicker{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sun);font-weight:700}
+section h2{font-size:clamp(25px,5.5vw,34px);margin:6px 0 12px}
+.lead{color:var(--muted);margin:0 0 18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+
+/* sueño */
+.big{font-family:Fraunces,serif;font-size:clamp(20px,4.6vw,25px);line-height:1.35;margin:0}
+.big em{color:var(--river2);font-style:normal;font-weight:800}
+@media (prefers-color-scheme: dark){.big em{color:#5cc4d6}}
+
+/* componentes */
+.comp{display:grid;gap:12px}
+@media(min-width:700px){.comp{grid-template-columns:1fr 1fr}}
+.c{position:relative;overflow:hidden;padding:0}
+.c .top{padding:18px 18px 14px;color:#fff}
+.c .num{font-size:12px;font-weight:700;letter-spacing:.1em;opacity:.85}
+.c h3{font-size:22px;margin:4px 0 4px}
+.c .top p{margin:0;font-size:14px;opacity:.92}
+.c ul{margin:0;padding:14px 18px 16px 36px;font-size:14px;color:var(--muted)}
+.c ul li{margin-bottom:4px}
+.c1 .top{background:linear-gradient(135deg,#0f4c5c,#1b7a8c)}
+.c2 .top{background:linear-gradient(135deg,#9c4a4a,#f28c28)}
+.c3 .top{background:linear-gradient(135deg,#2c5f4a,#5a9a6e)}
+.c4 .top{background:linear-gradient(135deg,#6b4f1d,#b9862f)}
+.emoji{position:absolute;right:14px;top:12px;font-size:38px;opacity:.9}
+
+/* mapa */
+.map svg{width:100%;height:auto;display:block}
+.map .note{font-size:12px;color:var(--muted);margin-top:8px}
+
+/* día */
+.day{list-style:none;margin:0;padding:0}
+.day li{display:grid;grid-template-columns:72px 1fr;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.day li:last-child{border:0}
+.day .h{font-weight:700;color:var(--sun);font-size:14px;padding-top:2px}
+.day b{display:block}
+.day span{color:var(--muted);font-size:14px}
+
+/* etapas */
+.stages{display:grid;gap:12px}
+@media(min-width:700px){.stages{grid-template-columns:repeat(3,1fr)}}
+.st .lbl{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:7px;background:var(--sand);color:var(--ink)}
+.st h3{font-size:19px;margin:10px 0 6px}
+.st ul{margin:0;padding-left:18px;font-size:14px;color:var(--muted)}
+.st.s1{border-top:5px solid var(--leaf)}.st.s2{border-top:5px solid var(--sun)}.st.s3{border-top:5px solid var(--river2)}
+
+/* referentes */
+.refs{display:grid;gap:12px}
+@media(min-width:700px){.refs{grid-template-columns:repeat(3,1fr)}}
+.ref h3{font-size:18px;margin-bottom:2px}
+.ref .where{font-size:13px;color:var(--muted);font-weight:600;margin-bottom:8px}
+.ref p{margin:0;font-size:14px;color:var(--muted)}
+.ref .fig{font-family:Fraunces,serif;font-size:24px;font-weight:800;color:var(--river2);display:block;margin-top:8px}
+@media (prefers-color-scheme: dark){.ref .fig{color:#5cc4d6}}
+
+/* tablas */
+.rows{display:grid;gap:8px}
+.row{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.row .i{flex:none;font-size:22px;line-height:1}
+.row b{display:block}
+.row span{color:var(--muted);font-size:14px}
+
+.who{display:flex;flex-wrap:wrap;gap:8px}
+.who span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:14px;font-weight:500}
+
+/* form */
+form{display:grid;gap:12px}
+label{font-weight:600;font-size:14px;display:block;margin-bottom:4px}
+input,select,textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:12px;font:inherit;background:var(--bg);color:var(--ink)}
+textarea{min-height:90px;resize:vertical}
+.two{display:grid;gap:12px}
+@media(min-width:600px){.two{grid-template-columns:1fr 1fr}}
+
+footer{margin-top:40px;padding:26px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer b{color:var(--ink)}
+.src li{font-size:14px;margin-bottom:8px}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%) translateY(90px);background:var(--river);color:#fff;padding:10px 16px;border-radius:12px;font-size:14px;transition:transform .25s;z-index:9}
+.toast.show{transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brand">Propuesta ciudadana · Vibras Positivas HM</div>
+    <h1>Caucasia,<br>Puerto del Cauca</h1>
+    <p class="sub">Un río para vivirlo, no solo para cruzarlo.</p>
+    <p>Malecón por la orilla, paseos en barcaza al atardecer, la Laguna El Silencio y una Ruta Campesina por las parcelas de Paraguay. Un solo destino para que el que pase por Caucasia se quede.</p>
+    <div class="cta">
+      <a class="btn sun" href="#apoyo">Yo apoyo este proyecto</a>
+      <a class="btn ghost" href="#propuesta">Ver la propuesta</a>
+    </div>
+  </div>
+  <div class="sunwrap" aria-hidden="true">
+    <svg viewBox="0 0 400 150" preserveAspectRatio="none">
+      <circle cx="300" cy="62" r="34" fill="#ffd27a" opacity=".95"/>
+      <path d="M0 78 Q60 70 120 76 T240 74 T400 76 V150 H0Z" fill="#0b3743"/>
+      <path d="M0 92 Q80 84 160 92 T320 90 T400 92" stroke="#ffd27a" stroke-width="2" fill="none" opacity=".55"/>
+      <path d="M40 108 Q120 100 200 108 T360 106" stroke="#ffd27a" stroke-width="1.5" fill="none" opacity=".35"/>
+      <g fill="#081f26"><path d="M110 98 h70 l-8 9 h-54z"/><rect x="128" y="88" width="34" height="10" rx="2"/></g>
+      <g fill="#081f26"><rect x="0" y="66" width="400" height="3"/><rect x="20" y="52" width="2" height="14"/><circle cx="21" cy="51" r="3"/><rect x="80" y="52" width="2" height="14"/><circle cx="81" cy="51" r="3"/><rect x="200" y="52" width="2" height="14"/><circle cx="201" cy="51" r="3"/><rect x="360" y="52" width="2" height="14"/><circle cx="361" cy="51" r="3"/></g>
+    </svg>
+  </div>
+</header>
+
+<nav id="nav"><div class="wrap">
+  <a href="#sueno" class="on">El sueño</a>
+  <a href="#propuesta">Propuesta</a>
+  <a href="#mapa">Mapa</a>
+  <a href="#un-dia">Un día</a>
+  <a href="#etapas">Etapas</a>
+  <a href="#referentes">Referentes</a>
+  <a href="#financia">¿Quién paga?</a>
+  <a href="#retos">Retos</a>
+  <a href="#apoyo">Apoyo</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="sueno">
+  <div class="kicker">El sueño</div>
+  <h2>El río más grande de Antioquia nos pasa por el frente</h2>
+  <div class="card">
+    <p class="big">Montería tiene su <em>Ronda del Sinú</em>. Barranquilla tiene su <em>Gran Malecón</em>. Caucasia tiene el <em>río Cauca</em> y miles de viajeros que pasan cada día por la troncal hacia la Costa… y siguen derecho.</p>
+    <p style="color:var(--muted);margin:14px 0 0">La idea es sencilla: convertir la orilla en la sala de la ciudad, darle al viajero razones para quedarse una noche y que la plata se quede en manos de pescadores, campesinos, cocineras, guías y comerciantes de aquí.</p>
+  </div>
+</section>
+
+<section id="propuesta">
+  <div class="kicker">La propuesta</div>
+  <h2>Cuatro piezas, un solo destino</h2>
+  <div class="comp">
+    <article class="card c c1">
+      <div class="top"><span class="emoji">🌅</span><div class="num">01</div><h3>Malecón del Cauca</h3><p>La orilla convertida en paseo para toda la familia.</p></div>
+      <ul><li>Sendero peatonal y ciclovía junto al río</li><li>Miradores para el atardecer</li><li>Plazoleta gastronómica con cocina del Bajo Cauca</li><li>Iluminación, bancas, juegos infantiles y rampas</li><li>Muelle turístico de embarque</li></ul>
+    </article>
+    <article class="card c c2">
+      <div class="top"><span class="emoji">⛴️</span><div class="num">02</div><h3>Paseos en barcaza</h3><p>Navegar el Cauca como se hace en el Sinú.</p></div>
+      <ul><li>Barcazas o planchones turísticos con techo y chalecos</li><li>Recorrido del atardecer y paseo familiar de fin de semana</li><li>Música, comida típica y guía que cuenta la historia del río</li><li>Operadores locales: pescadores y transportadores formalizados</li></ul>
+    </article>
+    <article class="card c c3">
+      <div class="top"><span class="emoji">🦩</span><div class="num">03</div><h3>Laguna El Silencio</h3><p>Naturaleza a minutos del centro.</p></div>
+      <ul><li>Senderos ecológicos y avistamiento de aves</li><li>Miradores de madera y zonas de descanso</li><li>Aprovechar las obras de mitigación de inundaciones del Caño El Silencio, ya registradas en el banco nacional de proyectos</li><li>Educación ambiental con colegios</li></ul>
+    </article>
+    <article class="card c c4">
+      <div class="top"><span class="emoji">🌽</span><div class="num">04</div><h3>Ruta Campesina Paraguay</h3><p>Turismo en las parcelas que el Estado entregó a campesinos.</p></div>
+      <ul><li>Parcelas de un cuarterón a una hectárea, tierra muy productiva y asociación organizada</li><li>Recorrido por los cultivos con el campesino como guía</li><li>Senderos entre parcelas y almuerzo campesino</li><li>"Coseche y lleve" y mercado de la parcela: venta directa sin intermediarios</li></ul>
+    </article>
+  </div>
+</section>
+
+<section id="mapa">
+  <div class="kicker">Así se conecta</div>
+  <h2>El corredor en un mapa</h2>
+  <div class="card map">
+    <svg viewBox="0 0 400 300" role="img" aria-label="Esquema del corredor turístico: el río Cauca con el malecón y el muelle junto al centro de Caucasia, la Laguna El Silencio y la Ruta Campesina Paraguay conectadas por senderos">
+      <rect width="400" height="300" rx="14" fill="var(--sand)"/>
+      <path d="M-10 40 C 90 60, 120 120, 190 140 S 300 190, 410 250" stroke="#1b7a8c" stroke-width="34" fill="none" stroke-linecap="round" opacity=".85"/>
+      <path d="M-10 40 C 90 60, 120 120, 190 140 S 300 190, 410 250" stroke="#7cc6d3" stroke-width="2" fill="none" stroke-dasharray="6 8"/>
+      <text x="300" y="232" font-family="Inter" font-size="12" font-weight="700" fill="#0f4c5c" transform="rotate(26 300 232)">Río Cauca</text>
+      <path d="M110 112 C 140 140, 170 160, 215 170" stroke="#f28c28" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <rect x="120" y="170" width="92" height="56" rx="8" fill="var(--card)" stroke="var(--line)"/>
+      <text x="166" y="194" text-anchor="middle" font-family="Inter" font-size="12" font-weight="700" fill="var(--ink)">Centro</text>
+      <text x="166" y="210" text-anchor="middle" font-family="Inter" font-size="12" font-weight="700" fill="var(--ink)">Caucasia</text>
+      <circle cx="170" cy="153" r="7" fill="#fff" stroke="#9c4a4a" stroke-width="3"/>
+      <text x="60" y="150" font-family="Inter" font-size="12" font-weight="800" fill="#b25d12" stroke="#fff8ee" stroke-width="4" paint-order="stroke">Malecón</text>
+      <text x="182" y="168" font-family="Inter" font-size="12" font-weight="800" fill="#9c4a4a" stroke="#fff8ee" stroke-width="4" paint-order="stroke">Muelle</text>
+      <ellipse cx="300" cy="80" rx="46" ry="26" fill="#5a9a6e" opacity=".85"/>
+      <text x="300" y="78" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#fff">Laguna</text>
+      <text x="300" y="92" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#fff">El Silencio</text>
+      <g fill="#b9862f" opacity=".9"><rect x="40" y="200" width="26" height="20" rx="3"/><rect x="70" y="200" width="26" height="20" rx="3"/><rect x="40" y="224" width="26" height="20" rx="3"/><rect x="70" y="224" width="26" height="20" rx="3"/><rect x="40" y="248" width="26" height="20" rx="3"/><rect x="70" y="248" width="26" height="20" rx="3"/></g>
+      <text x="68" y="285" text-anchor="middle" font-family="Inter" font-size="11" font-weight="700" fill="#6b4f1d">Parcelas Paraguay</text>
+      <path d="M212 190 C 250 170, 270 130, 290 106" stroke="#3a7d44" stroke-width="3" fill="none" stroke-dasharray="5 5"/>
+      <path d="M120 210 C 110 220, 100 226, 98 230" stroke="#3a7d44" stroke-width="3" fill="none" stroke-dasharray="5 5"/>
+    </svg>
+    <p class="note">Esquema ilustrativo, no a escala. Las ubicaciones exactas se definen con la Alcaldía y los estudios técnicos. Línea naranja: malecón · Línea verde punteada: senderos.</p>
+  </div>
+</section>
+
+<section id="un-dia">
+  <div class="kicker">La experiencia</div>
+  <h2>Un día en Caucasia, Puerto del Cauca</h2>
+  <div class="card">
+    <ul class="day">
+      <li><div class="h">7:00 a. m.</div><div><b>Ruta Campesina Paraguay</b><span>Recorrido por las parcelas, desayuno campesino y cosecha con el dueño.</span></div></li>
+      <li><div class="h">12:00 m.</div><div><b>Almuerzo de la tierra</b><span>Lo que se sembró en la parcela, cocinado por la asociación.</span></div></li>
+      <li><div class="h">3:00 p. m.</div><div><b>Laguna El Silencio</b><span>Sendero, aves y descanso a la sombra.</span></div></li>
+      <li><div class="h">5:30 p. m.</div><div><b>Barcaza del atardecer</b><span>Una hora por el Cauca viendo caer el sol.</span></div></li>
+      <li><div class="h">7:30 p. m.</div><div><b>Noche en el malecón</b><span>Comida típica, música y la ciudad mirando al río.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<section id="etapas">
+  <div class="kicker">Paso a paso</div>
+  <h2>Empezar por lo que se puede ya</h2>
+  <p class="lead">Lo que no exige obras en el río arranca primero. Lo más caro llega cuando haya estudios y licencias.</p>
+  <div class="stages">
+    <div class="card st s1"><span class="lbl">Etapa 1 · Arranque</span><h3>Probar el destino</h3><ul><li>Piloto de la Ruta Campesina con la asociación de Paraguay</li><li>Paseos en embarcaciones habilitadas desde un punto de embarque existente</li><li>Señalización, guías formados y esta app como vitrina</li></ul></div>
+    <div class="card st s2"><span class="lbl">Etapa 2 · Obras en tierra</span><h3>Malecón y laguna</h3><ul><li>Diseños y primer tramo del malecón</li><li>Senderos y miradores de la Laguna El Silencio</li><li>Plazoleta gastronómica y muelle turístico</li></ul></div>
+    <div class="card st s3"><span class="lbl">Etapa 3 · El río</span><h3>Intervención del cauce</h3><ul><li>Estudios hidráulicos y licencia ambiental</li><li>Adecuación de orillas y muelles en el agua</li><li>Barcazas turísticas propias y ampliación del malecón</li></ul></div>
+  </div>
+</section>
+
+<section id="referentes">
+  <div class="kicker">Ya se hizo en otras partes</div>
+  <h2>Referentes</h2>
+  <div class="refs">
+    <div class="card ref"><h3>Ronda del Sinú</h3><div class="where">Montería, Córdoba · río Sinú</div><p>En 2021, Fontur y la Alcaldía firmaron un convenio para ampliar la Ronda con senderos, ciclovía, miradores, muelles, gimnasio al aire libre y juegos infantiles, financiado completo por Fontur.</p><span class="fig">≈ $9.934 millones</span></div>
+    <div class="card ref"><h3>Gran Malecón</h3><div class="where">Barranquilla · río Magdalena</div><p>Convirtió la orilla del Magdalena en el punto de encuentro de la ciudad: paseo, comida, deporte y eventos frente al río.</p></div>
+    <div class="card ref"><h3>"El vuelo del garzón azul"</h3><div class="where">Valle del Cauca · mismo río Cauca</div><p>La CVC navega el Cauca con un barco de 12 metros para 40 pasajeros entre Guacarí y la Laguna de Sonso, con muelles entregados en 2024. Si se puede allá, se puede aquí.</p><span class="fig">40 pasajeros</span></div>
+  </div>
+</section>
+
+<section id="financia">
+  <div class="kicker">La plata</div>
+  <h2>¿Quién lo financia?</h2>
+  <div class="rows">
+    <div class="row"><span class="i">🏛️</span><div><b>Fontur (Fondo Nacional de Turismo)</b><span>Financia infraestructura turística como la Ronda del Sinú. Los proyectos los presenta normalmente la Alcaldía o la Gobernación.</span></div></div>
+    <div class="row"><span class="i">🗺️</span><div><b>Gobernación de Antioquia y regalías</b><span>Cofinanciación departamental y proyectos aprobados con recursos de regalías.</span></div></div>
+    <div class="row"><span class="i">🏙️</span><div><b>Alcaldía de Caucasia</b><span>Contrapartida, predios, diseños y mantenimiento.</span></div></div>
+    <div class="row"><span class="i">🇨🇴</span><div><b>Reinventando Colombia 2030 · Misión Crecer</b><span>Turismo es uno de los sectores del portafolio de 133 proyectos, y el vicepresidente invitó a presentar propuestas nuevas.</span></div></div>
+    <div class="row"><span class="i">🤝</span><div><b>Inversión privada y obras por impuestos</b><span>Restaurantes, operadores de barcazas y empresas de la región que quieran invertir o pagar impuestos con obras.</span></div></div>
+    <div class="row"><span class="i">🌱</span><div><b>Programas para el campo</b><span>Apoyo a la asociación de Paraguay para adecuar la Ruta Campesina: senderos, cocina y punto de venta.</span></div></div>
+  </div>
+</section>
+
+<section id="retos">
+  <div class="kicker">Con los pies en la tierra</div>
+  <h2>Retos que hay que resolver</h2>
+  <div class="rows">
+    <div class="row"><span class="i">📋</span><div><b>Licencia ambiental</b><span>Cualquier obra dentro del río (meter máquinas, dragar, muelles en el agua) necesita estudios y licencia de la autoridad ambiental, Corantioquia. Por eso va en la etapa 3.</span></div></div>
+    <div class="row"><span class="i">⛴️</span><div><b>Permisos de navegación</b><span>Las embarcaciones turísticas deben estar habilitadas, con chalecos, capacidad controlada y tripulación capacitada.</span></div></div>
+    <div class="row"><span class="i">🌊</span><div><b>Un río cambiante</b><span>El caudal sube y baja y el río carga sedimentos de la minería. Los diseños tienen que aguantar crecientes.</span></div></div>
+    <div class="row"><span class="i">💧</span><div><b>Calidad del agua</b><span>Por la minería de oro, el paseo es para navegar y mirar. Bañarse o pescar para comer debe esperar estudios.</span></div></div>
+    <div class="row"><span class="i">🛡️</span><div><b>Seguridad y orden</b><span>Iluminación, Policía de Turismo y vendedores organizados desde el primer día.</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Para quién</div>
+  <h2>Quiénes ganan</h2>
+  <div class="who">
+    <span>👨‍🌾 Campesinos de Paraguay</span><span>🎣 Pescadores y transportadores del río</span><span>👩‍🍳 Cocineras y restaurantes</span><span>🧭 Jóvenes guías</span><span>🏪 Tenderos y comercio</span><span>🏨 Hoteles y residencias</span><span>👨‍👩‍👧 Las familias de Caucasia</span>
+  </div>
+</section>
+
+<section id="apoyo">
+  <div class="kicker">Súmese</div>
+  <h2>Yo apoyo Caucasia, Puerto del Cauca</h2>
+  <p class="lead">Deje su apoyo o su idea. Le llega directo por WhatsApp al equipo de la propuesta para llevarla a la Alcaldía, el Concejo y la Gobernación.</p>
+  <form class="card" id="f">
+    <div class="two">
+      <div><label for="nom">Nombre</label><input id="nom" required autocomplete="name" placeholder="Su nombre"></div>
+      <div><label for="bar">Barrio o vereda</label><input id="bar" placeholder="Ej.: Paraguay, El Centro…"></div>
+    </div>
+    <div><label for="rol">Usted es…</label>
+      <select id="rol"><option>Ciudadano de Caucasia</option><option>Campesino o parcelero</option><option>Pescador o transportador del río</option><option>Comerciante o restaurante</option><option>Joven o estudiante</option><option>Líder comunal</option><option>Visitante</option></select></div>
+    <div><label for="idea">Su idea o comentario (opcional)</label><textarea id="idea" placeholder="¿Qué le agregaría al proyecto?"></textarea></div>
+    <div class="cta" style="margin-top:0"><button class="btn wa" type="submit">Enviar mi apoyo por WhatsApp</button><button class="btn sec" type="button" id="share">Compartir la propuesta</button></div>
+  </form>
+</section>
+
+<section>
+  <div class="kicker">Para verificar</div>
+  <h2>Fuentes</h2>
+  <ul class="src">
+    <li><a href="https://www.bnamericas.com/en/project-profile/implementation-of-corrective-intervention-works-in-cano-el-silencio-de-caucasia-for-flood-risk-mitigation-in-the-sub-cauca-sub-region-of-the-department-of-antioquia-bpin-2018000040022" target="_blank" rel="noopener">Obras correctivas en el Caño El Silencio de Caucasia (BPIN 2018000040022)</a></li>
+    <li><a href="https://www.elheraldo.co/cordoba/2021/02/18/alcaldia-de-monteria-y-fontur-firman-convenio-para-ampliar-ronda-del-sinu-795749/" target="_blank" rel="noopener">El Heraldo — Alcaldía de Montería y Fontur firman convenio para ampliar la Ronda del Sinú (2021)</a></li>
+    <li><a href="https://www.elpais.com.co/cali/el-rio-cauca-revive-asi-es-la-nueva-ruta-en-barco-tras-un-siglo-sin-navegar-1022.html" target="_blank" rel="noopener">El País — El río Cauca revive: la nueva ruta en barco (2025)</a></li>
+    <li><a href="https://www.portafolio.co/economia/gobierno/vicepresidente-presenta-133-proyectos-por-us-120-324-millones-para-atraer-inversiones-a-colombia-504715" target="_blank" rel="noopener">Portafolio — Reinventando Colombia 2030: 133 proyectos (oct 2026)</a></li>
+    <li><a href="https://haroldco45.github.io/reinventando-colombia-2030/#bajo-cauca" target="_blank" rel="noopener">Seguimiento ciudadano a Reinventando Colombia 2030 · Bajo Cauca</a></li>
+  </ul>
+</section>
+
+<footer>
+  <b>Caucasia, Puerto del Cauca</b> · Propuesta ciudadana<br>
+  Elaborada por <b>Vibras Positivas HM</b> · Harold Marín · Caucasia, Antioquia · WhatsApp 311 770 0431<br>
+  Versión del 20 de octubre de 2026, 5:30 a. m. (hora Colombia)<br>
+  Es una propuesta para discusión. No es un proyecto oficial aprobado; cifras y referentes vienen de fuentes públicas citadas arriba.
+</footer>
+</main>
+<div class="toast" id="toast">Enlace copiado</div>
+
+<script>
+const WA = "573117700431";
+const url = location.href.split("#")[0];
+document.getElementById("f").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = id => document.getElementById(id).value.trim();
+  let m = `🌅 *Yo apoyo Caucasia, Puerto del Cauca*\n\n👤 ${v("nom")}\n📍 ${v("bar") || "—"}\n🏷️ ${v("rol")}`;
+  if (v("idea")) m += `\n💡 ${v("idea")}`;
+  window.open("https://wa.me/" + WA + "?text=" + encodeURIComponent(m), "_blank");
+});
+document.getElementById("share").onclick = async () => {
+  const text = "🌅 Caucasia, Puerto del Cauca: malecón, barcazas, Laguna El Silencio y Ruta Campesina Paraguay. ¿Lo apoya?";
+  if (navigator.share) { try { await navigator.share({ title: "Caucasia, Puerto del Cauca", text, url }); return; } catch (e) {} }
+  window.open("https://wa.me/?text=" + encodeURIComponent(text + "\n" + url), "_blank");
+};
+const links = [...document.querySelectorAll("nav a")];
+const io = new IntersectionObserver(es => es.forEach(en => {
+  if (en.isIntersecting && en.target.id) {
+    links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + en.target.id));
+    const on = links.find(a => a.classList.contains("on")); on && on.scrollIntoView({ inline: "center", block: "nearest" });
+  }
+}), { rootMargin: "-45% 0px -50% 0px" });
+document.querySelectorAll("section[id]").forEach(s => io.observe(s));
+if ("serviceWorker" in navigator) addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+</script>
+</body>
+</html>
